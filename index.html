@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英単語タイピング</title>
+  <style>
+    /* 全体設定 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    /* コンテナ（中央寄せ） */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+      color: #222;
+    }
+
+    /* サイト一覧リスト */
+    .site-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* 個別カードアイテム */
+    .site-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .site-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    /* 1200×630 のアスペクト比（16:8.4 ≒ 約 1.91 : 1）を維持する画像表示領域 */
+    .card-image-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 52.5%; /* 630 / 1200 = 0.525 (52.5%) */
+      background-color: #e2e8f0;
+      overflow: hidden;
+    }
+
+    .card-image-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 画像をはみ出さず枠いっぱいに綺麗に表示 */
+    }
+
+    /* テキスト・詳細部分 */
+    .card-content {
+      padding: 16px 20px;
+      border-top: 1px solid #eee;
+      background-color: #ffffff;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #1a202c;
+      line-height: 1.4;
+    }
+
+    .card-description {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>英単語帳一覧</h1>
+
+    <div class="site-list">
+
+      <!-- ==================== カード 1 ==================== -->
+      <a href="https://target1900-4quiz.netlify.app/" class="site-card" target="_blank" rel="noopener noreferrer">
+        <div class="card-image-wrapper">
+          <!-- 画像パスやURLを指定してください（1200×630推奨） -->
+          <img src="https://github.com/hideyan1017/target1900/blob/main/%E3%82%BF%E3%82%B2%E8%A1%A8%E7%B4%99.png?raw=true" alt="ターゲット1700万pt">
+        </div>
+        <div class="card-content">
+          <div class="card-title">英単語ターゲット1900（6訂版）</div>
+          <!-- 補足説明を入れる場合はここ（不要なら削除可） -->
+        </div>
+      </a>
+
+      <!-- ==================== カード 2 ==================== -->
+      <a href="https://example.com/site2" class="site-card" target="_blank" rel="noopener noreferrer">
+        <div class="card-image-wrapper">
+          <img src="https://via.placeholder.com/1200x630?text=1200x630+Image" alt="シス単">
+        </div>
+        <div class="card-content">
+          <div class="card-title">シス単</div>
+        </div>
+      </a>
+
+      <!-- ==================== カード 3 ==================== -->
+      <a href="https://example.com/site3" class="site-card" target="_blank" rel="noopener noreferrer">
+        <div class="card-image-wrapper">
+          <img src="https://via.placeholder.com/1200x630?text=1200x630+Image" alt="5Stück 450円">
+        </div>
+        <div class="card-content">
+          <div class="card-title">5Stück 450円</div>
+        </div>
+      </a>
+
+      <!-- 
+        【増やし方】
+        上記「カード 1」の <!-- ==================== カード 1 ==================== -->  
+      <!-- カード追加分 -->
+      <a href="https://example.com/site4" class="site-card" target="_blank" rel="noopener noreferrer">
+        <div class="card-image-wrapper">
+          <img src="https://via.placeholder.com/1200x630?text=1200x630+Image" alt="新しいサイト">
+        </div>
+        <div class="card-content">
+          <div class="card-title">新しいサイトのタイトル</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>
